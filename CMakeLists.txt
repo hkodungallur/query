@@ -27,16 +27,16 @@ GoYacc (TARGET n1ql-yacc YFILE "${PROJECT_SOURCE_DIR}/parser/n1ql/n1ql.y")
 GoInstall (TARGET cbq-engine PACKAGE github.com/couchbase/query/server/cbq-engine
   GOPATH "${PROJECT_SOURCE_DIR}/../../../.." "${GODEPSDIR}"
   DEPENDS n1ql-yacc INSTALL_PATH bin
-  GOVERSION 1.7rc2
+  GOVERSION 1.7
   GOTAGS ${_gotags})
 
 GoInstall (TARGET cbq.old PACKAGE github.com/couchbase/query/shell/cbq.old
   GOPATH "${PROJECT_SOURCE_DIR}/../../../.." "${GODEPSDIR}"
   DEPENDS n1ql-yacc cbq-engine INSTALL_PATH bin
-  GOVERSION 1.7rc2)
+  GOVERSION 1.7)
 
 GoInstall (TARGET cbq PACKAGE github.com/couchbase/query/shell/cbq
   GOPATH "${PROJECT_SOURCE_DIR}/../../../.." "${GODEPSDIR}"
   INSTALL_PATH bin
-  GOVERSION 1.7rc2)
+  GOVERSION 1.7)
 
